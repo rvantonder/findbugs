@@ -781,7 +781,7 @@ public class UnreadFields extends OpcodeStackDetector {
             boolean isConstructor = "<init>".equals(getMethodName()) || "<clinit>".equals(getMethodName());
             if (getMethod().isStatic() == f.isStatic()
                     && (isConstructor || data.calledFromConstructors.contains(getMethodName() + ":" + getMethodSig())
-                            || "init".equals(getMethodName()) || "init".equals(getMethodName())
+                            || "init".equals(getMethodName()) || "clinit".equals(getMethodName())
                             || "initialize".equals(getMethodName()) || getMethod().isPrivate())) {
 
                 if (isConstructor) {
